@@ -1,0 +1,39 @@
+/* section {
+  padding: 12%;
+} */
+
+* {
+  box-sizing: border-box;
+}
+.parent {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.box {
+  font-size: 44px;
+  width: 30%;
+  height: 200px;
+  background-color: #0022ff;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.parent > div:nth-child(3n) {
+  margin-right: 0;
+}
+
+.parent::after {
+  content: '';
+  flex: auto;
+}
+
+.parent > div:nth-child(-n+3) {
+  margin-top: 0;
+}
+
+.parent > div:last-child {
+  margin-left:5%;
+}
